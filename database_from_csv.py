@@ -31,7 +31,7 @@ class DatabaseFromCSV():
         self.con = psycopg2.connect(dbname=dbname, user='psql_admin', password='password')
         self.con.autocommit = True
 
-        # ho through all files in given folder path and create a table for each .csv file
+        # go through all files in given folder path and create a table for each .csv file
         files = os.listdir(self.folder_path)
         for file in files:
             if file[-4:] == '.csv':
